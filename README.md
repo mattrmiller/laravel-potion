@@ -30,6 +30,7 @@ When using Potion the you will often see is "resources" and "assets". Think of r
  ###Installation
 1) Add package to your composer.json file:
 > require: "classygeeks/potion": "dev-master"
+
 2) Add the Potion Service provider to your config/app.php file under the predefined "providers" array:
 > 'providers' => [
 >     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
