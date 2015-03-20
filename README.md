@@ -27,9 +27,10 @@ When using Potion the you will often see is "resources" and "assets". Think of r
  	 - JsCompressorFilter from YUI
  	 - ScssphpFilter
  
- ###Installation
+###Installation
 1) Add package to your composer.json file:
 > require: "classygeeks/potion": "dev-master"
+
 2) Add the Potion Service provider to your config/app.php file under the predefined "providers" array:
 > 'providers' => [
 >     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
@@ -39,7 +40,7 @@ When using Potion the you will often see is "resources" and "assets". Think of r
 >     ],
     
 3) Publish the config file
-   > php artisan vendor:publish
+> php artisan vendor:publish
 
 You will now see to new Potion artisan commands. The configuration is very well documented and should be able to get even the most complex projects going quickly.
 
