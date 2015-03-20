@@ -1,5 +1,5 @@
 {
-	"name": "laravel/potion",
+	"name": "classygeeks/potion",
 	"description": "Potion is a pure PHP asset manager for Laravel 5 based off of Assetic.",
 	"authors": [
 		{
