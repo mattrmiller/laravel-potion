@@ -26,7 +26,7 @@ class ClearAssetsCommand extends Command
      *
      * @var string
      */
-    protected $name = 'potion:clear:assets';
+    protected $name = 'potion:clear-assets';
 
     /**
      * The console command description.
@@ -52,7 +52,7 @@ class ClearAssetsCommand extends Command
         parent::__construct();
 
         // Save config
-        $this->config = (isset($config['potion']) ? $config['potion'] : false);
+        $this->config = $config;
     }
 
     /**
