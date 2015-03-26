@@ -1,6 +1,14 @@
 {
 	"name": "classygeeks/potion",
-	"description": "Potion is a pure PHP asset manager for Laravel 5 based off of Assetic.",
+	"description": "Potion is a pure PHP asset manager for Laravel based off of Assetic.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Classy Geeks llc.",
+			"email": "support@classygeeks.com",
+			"homepage": "http://classygeeks.com"
+		}
+	],
 	"keywords": [
 		"assets",
 		"asset-processing",
@@ -14,13 +22,6 @@
 		"compass",
 		"cssmin",
 		"jsmin"
-	],
-	"authors": [
-		{
-			"name": "Classy Geeks llc.",
-			"email": "support@classygeeks.com",
-			"homepage": "http://classygeeks.com"
-		}
 	],
 	"tags": [
 		"assets",
@@ -37,7 +38,6 @@
 		"jsmin"
 
 	],
-	"license": "MIT",
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "5.0.*",
@@ -51,9 +51,9 @@
 	    "linkorb/jsmin-php": "dev-master"
     },
     "autoload": {
-        "psr-0": {
+	    "psr-4": {
             "ClassyGeeks\\Potion": "src/"
         }
     },
-    "minimum-stability": "stable"
+	"minimum-stability": "dev"
 }

@@ -38,7 +38,7 @@ class MakeAssetsCommand extends Command
      *
      * @var string
      */
-    protected $name = 'potion:make:assets';
+    protected $name = 'potion:make-assets';
 
     /**
      * The console command description.
@@ -64,7 +64,7 @@ class MakeAssetsCommand extends Command
         parent::__construct();
 
         // Save config
-        $this->config = (isset($config['potion']) ? $config['potion'] : false);
+        $this->config = $config;
     }
 
     /**
