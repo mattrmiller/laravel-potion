@@ -29,6 +29,13 @@ class PotionServiceProvider extends ServiceProvider
     protected $laravelVersion = 4;
 
     /**
+     * The laravel package separator
+     *
+     * @var int
+     */
+    protected $packageSeparator = '.';
+
+    /**
      * Indicates if loading of the provider is deferred.
      *
      * @var bool
@@ -52,6 +59,9 @@ class PotionServiceProvider extends ServiceProvider
 
             // -- Laravel 5
             $this->laravelVersion = 5;
+
+            // -- Package separator
+            $this->packageSeparator = '::';
 
             // -- Handle config file
             // -- -- Get path
@@ -101,7 +111,7 @@ class PotionServiceProvider extends ServiceProvider
      */
     public function getConfig()
     {
-        return \Config::get('potion');
+        return \Config::get("potion{$this->packageSeparator}config");
     }
 
     /**
