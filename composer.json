@@ -44,7 +44,7 @@
 	    "kriswallsmith/assetic": "1.2.*",
 	    "natxet/CssMin": "3.0.*",
 	    "leafo/lessphp": "0.5.*",
-	    "leafo/scssphp": "dev-master",
+	    "leafo/scssphp": "0.1.*",
 	    "leafo/scssphp-compass": "dev-master",
 	    "patchwork/jsqueeze": "2.0.*",
 	    "ptachoire/cssembed": "1.0.*",
