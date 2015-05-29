@@ -40,17 +40,16 @@
 	],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.* | 5.*",
+        "illuminate/support": "5.*",
+	    "kriswallsmith/assetic": "1.2.1",
+	    "kriswallsmith/assetic": "1.2.1",
+	    "natxet/CssMin": "3.0.2",
+	    "leafo/lessphp": "0.5.0",
+	    "leafo/scssphp": "0.1.1",
+	    "patchwork/jsqueeze": "2.0.2",
+	    "ptachoire/cssembed": "1.0.2",
+	    "linkorb/jsmin-php": "1.0.0",
 	    "kriswallsmith/assetic": "1.2.1"
-    },
-    "suggest": {
-        "leafo/lessphp": "Integration with the lessphp LESS compiler",
-        "leafo/scssphp": "Integration with the scssphp SCSS compiler",
-        "leafo/scssphp-compass": "Integration with the scssphp SCSS Compass compiler",
-        "natxet/CssMin": "Integration with the scssphp CSSMin compiler",
-        "ptachoire/cssembed": "Integration with phpcssembed to embed data uris",
-        "patchwork/jsqueeze": "Integration with the JSqueeze JavaScript compressor",
-        "linkorb/jsmin-php": "Integration with JSMin"
     },
     "autoload": {
 	    "psr-0": {

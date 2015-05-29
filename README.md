@@ -7,6 +7,9 @@ Laravel 5 comes with a great asset manager called Elixir. While there is nothing
 
 When using Potion the you will often see is "resources" and "assets". Think of resources as the raw resources inside of Laravel resources direction. Think of assets as what Potion will generate and will ultimately be served to visitors.
 
+###Laravel Support
+At this time Potion only supports Laravel 5. While Laravel 4 support was easy to implement in code, the time needed to support requests was too much.
+
 ###Features
  - Fully integrated into Laravels' artisan commands
  - Asset versioning support
@@ -14,7 +17,7 @@ When using Potion the you will often see is "resources" and "assets". Think of r
  - Bade Helpers for Asset inclusion in templates
  - Command to clear all assets already published on disk
  - Makes use of Cache configuration, and not disk, in order to account for load balanced servers.
- - Supports the following filters from Assetic, you must install these yourself as composer dependencies:
+ - Supports the following filters from Assetic:
 	 - OptiPngFilter
 	 - CssImportFilter
  	 - CssRewriteFilter
