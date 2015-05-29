@@ -14,7 +14,7 @@ When using Potion the you will often see is "resources" and "assets". Think of r
  - Bade Helpers for Asset inclusion in templates
  - Command to clear all assets already published on disk
  - Makes use of Cache configuration, and not disk, in order to account for load balanced servers.
- - Supports the following filters from Assetic:
+ - Supports the following filters from Assetic, you must install these yourself as composer dependencies:
 	 - OptiPngFilter
 	 - CssImportFilter
  	 - CssRewriteFilter
