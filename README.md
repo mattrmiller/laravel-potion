@@ -14,7 +14,7 @@ At this time Potion only supports Laravel 5. While Laravel 4 support was easy to
  - Fully integrated into Laravels' artisan commands
  - Asset versioning support
  - Asset CDN Url support
- - Bade Helpers for Asset inclusion in templates
+ - Blade Helpers for Asset inclusion in templates
  - Command to clear all assets already published on disk
  - Makes use of Cache configuration, and not disk, in order to account for load balanced servers.
  - Supports the following filters from Assetic:
