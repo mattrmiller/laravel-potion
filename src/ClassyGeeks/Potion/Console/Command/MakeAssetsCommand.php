@@ -129,11 +129,6 @@ class MakeAssetsCommand extends Command
             // -- JS Min
             $filter = new JSMinFilter();
             $filters['js_min'] = $filter;
-            // -- Js Squeeze
-            $filter = new JSqueezeFilter();
-            $filter->setSingleLine($this->config['filters']['js_squeeze']['single_line']);
-            $filter->keepImportantComments($this->config['filters']['js_squeeze']['keep_imp_comments']);
-            $filters['js_squeeze'] = $filter;
             // -- Js Yui
             $filter = new JsCompressorFilter($this->config['filters']['js_yui']['path_jar'], $this->config['filters']['js_yui']['path_java']);
             $filter->setNomunge($this->config['filters']['js_yui']['no_munge']);

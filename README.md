@@ -8,7 +8,7 @@ Laravel 5 comes with a great asset manager called Elixir. While there is nothing
 When using Potion the you will often see is "resources" and "assets". Think of resources as the raw resources inside of Laravel resources direction. Think of assets as what Potion will generate and will ultimately be served to visitors.
 
 ###Laravel Support
-At this time Potion only supports Laravel 5. While Laravel 4 support was easy to implement in code, the time needed to support requests was too much.
+At this time Potion only supports Laravel 5.1 or higher. While Laravel 4 support was easy to implement in code, the time needed to support requests was too much.
 
 ###Features
  - Fully integrated into Laravels' artisan commands
@@ -26,7 +26,6 @@ At this time Potion only supports Laravel 5. While Laravel 4 support was easy to
  	 - LessphpFilter
  	 - JSMinFilter
 	 - JpegoptimFilter
- 	 - JSqueezeFilter
  	 - JsCompressorFilter from YUI
  	 - ScssphpFilter
  

@@ -46,8 +46,8 @@ class PotionServiceProvider extends ServiceProvider
             $config_file => config_path('potion.php')
         ], 'config');
 
-        // Handle blade extensions
-        $this->bladeExtensions();
+        // Register blade extensions
+        $this->registerBladeExtensions();
 
     }
 
@@ -81,39 +81,39 @@ class PotionServiceProvider extends ServiceProvider
      */
     public function getConfig()
     {
-        return $this->app['config'];
+        return $this->app['config']['potion'];
     }
 
     /**
-     * Handle blade extensions
+     * Register blade extensions
      */
-    protected function bladeExtensions()
+    protected function registerBladeExtensions()
     {
         // Potion asset url
         \Blade::extend(function($view, $compiler)
         {
-            $pattern = $compiler->createMatcher('potion_asset_url');
+            $pattern = $this->createBladeMatcher('potion_asset_url');
             return preg_replace($pattern, '$1<?php echo(\ClassyGeeks\Potion\BladeHelpers::assetUrl$2); ?>', $view);
         });
 
         // Potion Css
         \Blade::extend(function($view, $compiler)
         {
-            $pattern = $compiler->createMatcher('potion_asset_css');
+            $pattern = $this->createBladeMatcher('potion_asset_css');
             return preg_replace($pattern, '$1<?php echo(\ClassyGeeks\Potion\BladeHelpers::assetCss$2); ?>', $view);
         });
 
         // Potion Js
         \Blade::extend(function($view, $compiler)
         {
-            $pattern = $compiler->createMatcher('potion_asset_js');
+            $pattern = $this->createBladeMatcher('potion_asset_js');
             return preg_replace($pattern, '$1<?php echo(\ClassyGeeks\Potion\BladeHelpers::assetJs$2); ?>', $view);
         });
 
         // Potion Img
         \Blade::extend(function($view, $compiler)
         {
-            $pattern = $compiler->createMatcher('potion_asset_img');
+            $pattern = $this->createBladeMatcher('potion_asset_img');
             return preg_replace($pattern, '$1<?php echo(\ClassyGeeks\Potion\BladeHelpers::assetImg$2); ?>', $view);
         });
     }
@@ -126,6 +126,16 @@ class PotionServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['potion'];
+    }
+
+    /**
+     * Create blade
+     * @param $function
+     * @return string
+     */
+    protected function createBladeMatcher($function)
+    {
+        return '/(?<!\w)(\s*)@'.$function.'(\s*\(.*\))/';
     }
 
 }
