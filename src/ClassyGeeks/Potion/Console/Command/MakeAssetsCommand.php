@@ -23,7 +23,6 @@ use Assetic\Filter\CssMinFilter;
 use Assetic\Filter\Yui\CssCompressorFilter;
 use Assetic\Filter\LessphpFilter;
 use Assetic\Filter\JSMinFilter;
-use Assetic\Filter\JSqueezeFilter;
 use Assetic\Filter\ScssphpFilter;
 use Assetic\Filter\Yui\JsCompressorFilter;
 
@@ -86,6 +85,11 @@ class MakeAssetsCommand extends Command
             $this->config['resource_path'] = rtrim($this->config['resource_path'], '\\');
             $this->config['assets_path'] = rtrim($this->config['assets_path'], '/');
             $this->config['assets_path'] = rtrim($this->config['assets_path'], '\\');
+
+            // Log
+            $this->info('Making assets using:');
+            $this->info("\tResource Path: {$this->config['resource_path']}");
+            $this->info("\tAsset Path: {$this->config['assets_path']}");
 
             // Make the assets path
             if (!$this->makePath($this->config['assets_path'])) {
@@ -259,9 +263,13 @@ class MakeAssetsCommand extends Command
      */
     protected function makePath($path)
     {
+        // Log
+        $this->info("Attempting to make path: {$path}");
+
         // Make
         if (!is_dir($path)) {
             if (mkdir($path) === false) {
+                $this->error("Error in making path: {$path}");
                 return false;
             }
         }
@@ -269,6 +277,7 @@ class MakeAssetsCommand extends Command
         // Make writable
         if (!is_writable($path)) {
             if (chmod($path, 0777) === false) {
+                $this->error("Error in making path writable: {$path}");
                 return false;
             }
         }
