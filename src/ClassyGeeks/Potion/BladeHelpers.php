@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2015 Classy Geeks llc. All Rights Reserved
+ * Copyright 2016 Matthew R. Miller via Classy Geeks llc. All Rights Reserved
  * http://classygeeks.com
  * MIT License:
  * http://opensource.org/licenses/MIT
