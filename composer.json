@@ -41,13 +41,12 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "5.*",
-	    "kriswallsmith/assetic": "1.2.1",
-	    "natxet/CssMin": "3.0.2",
-	    "leafo/lessphp": "0.5.0",
-	    "leafo/scssphp": "0.1.1",
-	    "ptachoire/cssembed": "1.0.2",
-	    "linkorb/jsmin-php": "1.0.0",
-	    "kriswallsmith/assetic": "1.2.1"
+	"kriswallsmith/assetic": "1.*",
+	"natxet/CssMin": "3.0.*",
+	"leafo/lessphp": "0.5.*",
+	"leafo/scssphp": "0.1.*",
+	"ptachoire/cssembed": "1.0.*",
+	"linkorb/jsmin-php": "1.0.*"
     },
     "autoload": {
 	    "psr-0": {
