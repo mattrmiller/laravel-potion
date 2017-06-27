@@ -53,4 +53,8 @@ You will now see to new Potion artisan commands. The configuration is very well 
 - Resource watching command functionality
 - Support for more filters from Assetic
 
+# License
+[MIT License](LICENSE)
 
+# Author
+[Matthew R. Miller](https://github.com/mattrmiller)
