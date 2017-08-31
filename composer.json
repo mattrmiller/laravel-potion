@@ -44,7 +44,7 @@
 	"kriswallsmith/assetic": "1.*",
 	"natxet/CssMin": "3.0.*",
 	"leafo/lessphp": "0.5.*",
-	"leafo/scssphp": "0.1.*",
+	"leafo/scssphp": "0.6.*",
 	"ptachoire/cssembed": "1.0.*",
 	"linkorb/jsmin-php": "1.0.*"
     },
